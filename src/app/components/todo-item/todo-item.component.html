@@ -1,0 +1,10 @@
+<div [ngClass]="setClasses()">
+    <p>
+        <!-- adding 'onToggle' event when button is clicked -->
+        <!-- this will cross the word by a line -->
+        <input (change)="onToggle(todo)" type="checkbox"/>
+        {{ todo.title }}
+        <!-- adding 'onDelete' event when button is clicked -->
+        <button (click)="onDelete(todo)" class="del">x</button>
+    </p>
+</div>

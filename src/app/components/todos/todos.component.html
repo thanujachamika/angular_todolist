@@ -1,0 +1,15 @@
+<!-- we use '(addTodo)' to catch the '@Output' from 'add-todo.component.ts' file-->
+<!-- 'addTodo()'' function is on the 'todos.component.ts' file -->
+<app-add-todo 
+    (addTodo)="addTodo($event)"
+    >
+</app-add-todo>
+
+<!-- we use '(deleteTodo)' to catch the '@Output' from 'todo-item.component.ts' file-->
+<!-- 'deleteTodo()'' function is on the 'todos.component.ts' file -->
+<app-todo-item 
+    *ngFor="let todo of todos" 
+    [todo]="todo"
+    (deleteTodo)="deleteTodo($event)"
+    >
+</app-todo-item>
